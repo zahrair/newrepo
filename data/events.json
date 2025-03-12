@@ -18,5 +18,25 @@
     "category": "Appointments",
     "user": "user1",
     "reminderSet": false
+  },
+  {
+    "id": 3,
+    "name": "Team Meeting",
+    "description": "Discuss project status",
+    "date": "2025-03-20",
+    "time": "10:00",
+    "category": "Meetings",
+    "user": "user1",
+    "reminderSet": false
+  },
+  {
+    "id": 4,
+    "name": "Doctor's Appointment",
+    "description": "Annual checkup",
+    "date": "2025-03-22",
+    "time": "14:00",
+    "category": "Appointments",
+    "user": "user1",
+    "reminderSet": false
   }
 ]
