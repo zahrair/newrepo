@@ -14,7 +14,6 @@ function saveEvents(events) {
     fs.writeFileSync(dataFilePath, JSON.stringify(events, null, 2));
 }
 
-// 1. Create an Event
 function createEvent(name, description, date, time, category, user) {
     const events = loadEvents();
     const newEvent = {
@@ -32,13 +31,11 @@ function createEvent(name, description, date, time, category, user) {
     return newEvent;
 }
 
-// 2. Get Events by Category
 function getEventsByCategory(category) {
     const events = loadEvents();
     return events.filter(event => event.category === category);
 }
 
-// 3. Set Reminder
 function setReminder(eventId) {
     const events = loadEvents();
     const event = events.find(e => e.id === eventId);
@@ -50,13 +47,11 @@ function setReminder(eventId) {
     return null;
 }
 
-// 4. View Upcoming Events
 function getUpcomingEvents() {
     const events = loadEvents();
     return events.sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
-// 5. User Authentication
 const users = {};
 function registerUser(username, password) {
     if (users[username]) return "User already exists";
