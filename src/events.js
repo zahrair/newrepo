@@ -17,13 +17,8 @@ function saveEvents(events) {
 function createEvent(name, description, date, time, category, user) {
     const events = loadEvents();
     const newEvent = {
-        id: events.length + 1,
-        name,
-        description,
-        date,
-        time,
-        category,
-        user,
+        id: events.length + 1,name,description,
+        date,time, category,user,
         reminderSet: false
     };
     events.push(newEvent);
@@ -64,10 +59,6 @@ function loginUser(username, password) {
 }
 
 module.exports = {
-    createEvent,
-    getEventsByCategory,
-    setReminder,
-    getUpcomingEvents,
-    registerUser,
-    loginUser
+    createEvent,getEventsByCategory,setReminder,
+    getUpcomingEvents,registerUser,loginUser
 };
